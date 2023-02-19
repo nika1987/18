@@ -22,7 +22,7 @@ class MoviesList(Resource):
     def post(self):
         movie_data = request.json
         new_movie = movie_service.add_movie(movie_data)
-        return new_movie
+        return new_movie, {'Location': f'/movies/{new_movie["id"]}'}
 
 
 @movies_ns.route('/<int:movie_id>')
