@@ -1,7 +1,5 @@
-# этот файл для глобальных констант. чтобы не хардкодить строки/числа в коде, выносите их сюда.
-# например вместо C:\\Windows в коде, создайте константу WINDOWS_PATH здесь и присвойте ей значение
 
-# Пример
+import os
 
-# CONSTANT_NAME = "value"
-# LOG_DIR = "logs"
+INSTANCE_PATH = os.path.dirname(os.path.abspath(__file__))
+INSTANCE_PATH = os.path.join(INSTANCE_PATH, 'data')
